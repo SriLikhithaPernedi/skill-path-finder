@@ -139,7 +139,7 @@ const Login = () => {
                   setLoading(true);
                   try {
                     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-                      redirectTo: `${window.location.origin}/reset-password`,
+                      redirectTo: `${window.location.origin}/skill-path-finder/#/reset-password`,
                     });
                     if (error) throw error;
                     toast({ title: "Reset link sent!", description: "Check your email for a password reset link." });
